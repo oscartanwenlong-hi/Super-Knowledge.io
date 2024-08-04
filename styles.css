@@ -1,0 +1,172 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #ece9e6, #ffffff);
+    transition: background 0.5s ease;
+}
+
+header {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    animation: fadeInDown 1s ease;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    padding: 40px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+main.fade-out {
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+article {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease;
+    word-wrap: break-word; /* 防止长单词溢出 */
+    overflow-wrap: break-word; /* 防止长单词溢出 */
+}
+
+article:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+article h2 {
+    margin-top: 0;
+    font-size: 2em;
+    transition: color 0.3s ease;
+}
+
+article:hover h2 {
+    color: #ff7e5f;
+}
+
+article p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #666;
+    white-space: pre-wrap; /* 保留文本换行 */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+    animation: fadeInUp 1s ease;
+}
+
+/* “回到首页”按钮的样式和动画 */
+#back-home {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 24px;
+    font-size: 1em;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    animation: slideInLeft 1s ease;
+}
+
+#back-home:hover {
+    background: linear-gradient(to right, #feb47b, #ff7e5f);
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 按钮动画 */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+/* 为按钮添加点击效果 */
+#back-home:active {
+    animation: bounce 0.3s ease;
+}
+
+article img {
+    max-width: 100%; /* 使图片宽度不超过容器宽度 */
+    height: auto;    /* 保持图片比例 */
+    display: block;  /* 去除图片下方的空隙 */
+    margin: 20px 0;  /* 添加上下外边距 */
+    border-radius: 5px; /* 圆角效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+}
