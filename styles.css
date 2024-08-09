@@ -170,3 +170,23 @@ article img {
     border-radius: 5px; /* 圆角效果 */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
 }
+
+.download-btn {
+    background-color: #ff7e5f; /* 按钮颜色 */
+    color: white; /* 字体颜色 */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #ff967f; /* 鼠标悬停时的颜色 */
+    transform: scale(1.05); /* 鼠标悬停时的轻微放大效果 */
+}
+
+.download-btn:active {
+    transform: scale(0.95); /* 点击时的缩小效果 */
+}
